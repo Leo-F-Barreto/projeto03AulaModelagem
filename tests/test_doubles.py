@@ -1,7 +1,7 @@
-import pytest
+import  pytest
 
 # CODIGO DE TESTE (pytest)
-def test_finalizar_venda_com_sucesso():
+def test_consulta_taxas_locais_com_sucesso():
     # 1. ARRANGE
     stub_ServicoLogisticaAPI = Mock()
     stub_ServicoLogisticaAPI.taxa_local.return_value = 25
