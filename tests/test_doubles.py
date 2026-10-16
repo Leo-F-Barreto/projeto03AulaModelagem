@@ -1,5 +1,4 @@
 import pytest
-from unittest.mock import MagicMock
 
 # CODIGO DE TESTE (pytest)
 def test_finalizar_venda_com_sucesso():
@@ -10,11 +9,11 @@ def test_finalizar_venda_com_sucesso():
     dummy_user = Mock()
 
     # 2. ACT
-    resultado = finalizar_venda(stub_ServicoLogisticaAPI, mock_enviar_notificacao_rastreio, dummy_user, frete_id=101)
+    resultado = consulta_taxas_locais(stub_ServicoLogisticaAPI, mock_enviar_notificacao_rastreio, dummy_user, frete_id=101)
 
     # 3. ASSERT
     assert resultado == "Sucesso"
-    mock_email.enviar.assert_called_with(101)
+    mock_enviar_notificacao_rastreio.enviar.assert_called_with(101)
 
 
 def consulta_taxas_locais(stub_ServicoLogisticaAPI, mock_enviar_notificacao_rastreio, dummy_user, frete_id):
