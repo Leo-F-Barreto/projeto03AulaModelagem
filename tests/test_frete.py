@@ -1,15 +1,7 @@
 import pytest
 
-# Como a implementação ainda não foi criada, importamos uma função hipotética
-# que será criada posteriormente, por exemplo, no módulo 'src.frete'.
-try:
-    from src.frete import calcular_total
-except ImportError:
-    # Fallback apenas para os testes não quebrarem imediatamente na ausência do módulo.
-    # Remova isso quando a implementação real for criada.
-    def calcular_total(subtotal: float) -> float:
-        raise NotImplementedError("Implementação pendente")
-
+import pytest
+from src.frete import calcular_total
 
 def test_calculo_frete_padrao():
     """
