@@ -1,4 +1,4 @@
-from pytest import Mock 
+from unittest.mock import Mock
 
 # CODIGO DE TESTE (pytest)
 def test_consulta_taxas_locais_com_sucesso():

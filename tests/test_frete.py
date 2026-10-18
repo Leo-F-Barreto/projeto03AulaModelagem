@@ -1,6 +1,4 @@
 import pytest
-
-import pytest
 from src.frete import calcular_total
 
 def test_calculo_frete_padrao():
